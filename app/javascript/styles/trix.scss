@@ -4,30 +4,40 @@ trix-editor {
   margin: 0;
   padding: 0.4em 0.6em;
   min-height: 5em;
-  outline: none; }
+  outline: none;
+}
 trix-toolbar * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 trix-toolbar .trix-button-row {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 trix-toolbar .trix-button-group {
   display: flex;
   margin-bottom: 10px;
   border: 1px solid #bbb;
   border-top-color: #ccc;
   border-bottom-color: #888;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
   trix-toolbar .trix-button-group:not(:first-child) {
-    margin-left: 1.5vw; }
+    margin-left: 1.5vw;
+  }
     @media (max-device-width: 768px) {
       trix-toolbar .trix-button-group:not(:first-child) {
-        margin-left: 0; } }
+        margin-left: 0;
+      }
+    }
 trix-toolbar .trix-button-group-spacer {
-  flex-grow: 1; }
+  flex-grow: 1;
+}
   @media (max-device-width: 768px) {
     trix-toolbar .trix-button-group-spacer {
-      display: none; } }
+      display: none;
+    }
+  }
 trix-toolbar .trix-button {
   position: relative;
   float: left;
@@ -41,30 +51,40 @@ trix-toolbar .trix-button {
   border: none;
   border-bottom: 1px solid #ddd;
   border-radius: 0;
-  background: transparent; }
+  background: transparent;
+}
   trix-toolbar .trix-button:not(:first-child) {
-    border-left: 1px solid #ccc; }
+    border-left: 1px solid #ccc;
+  }
   trix-toolbar .trix-button.trix-active {
     background: #cbeefa;
-    color: black; }
+    color: black;
+  }
   trix-toolbar .trix-button:not(:disabled) {
-    cursor: pointer; }
+    cursor: pointer;
+  }
   trix-toolbar .trix-button:disabled {
-    color: rgba(0, 0, 0, 0.125); }
+    color: rgba(0, 0, 0, 0.125);
+  }
   @media (max-device-width: 768px) {
     trix-toolbar .trix-button {
       letter-spacing: -0.01em;
-      padding: 0 0.3em; } }
+      padding: 0 0.3em;
+    }
+  }
 trix-toolbar .trix-button--icon {
   font-size: inherit;
   width: 2.6em;
   height: 1.6em;
   max-width: calc(0.8em + 4vw);
-  text-indent: -9999px; }
+  text-indent: -9999px;
+}
   @media (max-device-width: 768px) {
     trix-toolbar .trix-button--icon {
       height: 2em;
-      max-width: calc(0.8em + 3.5vw); } }
+      max-width: calc(0.8em + 3.5vw);
+    }
+  }
   trix-toolbar .trix-button--icon::before {
     display: inline-block;
     position: absolute;
@@ -76,19 +96,25 @@ trix-toolbar .trix-button--icon {
     content: "";
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: contain;
+  }
     @media (max-device-width: 768px) {
       trix-toolbar .trix-button--icon::before {
         right: 6%;
-        left: 6%; } }
+        left: 6%;
+      }
+    }
   trix-toolbar .trix-button--icon.trix-active::before {
-    opacity: 1; }
+    opacity: 1;
+  }
   trix-toolbar .trix-button--icon:disabled::before {
-    opacity: 0.125; }
+    opacity: 0.125;
+  }
 trix-toolbar .trix-button--icon-attach::before {
   background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M16.5%206v11.5a4%204%200%201%201-8%200V5a2.5%202.5%200%200%201%205%200v10.5a1%201%200%201%201-2%200V6H10v9.5a2.5%202.5%200%200%200%205%200V5a4%204%200%201%200-8%200v12.5a5.5%205.5%200%200%200%2011%200V6h-1.5z%22%2F%3E%3C%2Fsvg%3E);
   top: 8%;
-  bottom: 4%; }
+  bottom: 4%;
+}
 trix-toolbar .trix-button--icon-bold::before {
   background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M15.6%2011.8c1-.7%201.6-1.8%201.6-2.8a4%204%200%200%200-4-4H7v14h7c2.1%200%203.7-1.7%203.7-3.8%200-1.5-.8-2.8-2.1-3.4zM10%207.5h3a1.5%201.5%200%201%201%200%203h-3v-3zm3.5%209H10v-3h3.5a1.5%201.5%200%201%201%200%203z%22%2F%3E%3C%2Fsvg%3E); }
 trix-toolbar .trix-button--icon-italic::before {
@@ -116,7 +142,8 @@ trix-toolbar .trix-button--icon-decrease-nesting-level::before {
 trix-toolbar .trix-button--icon-increase-nesting-level::before {
   background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M3%2019h19v-2H3v2zm7-6h12v-2H10v2zm-6.9-1L1%2014.2l1.4%201.4L6%2012l-.7-.7-2.8-2.8L1%209.9%203.1%2012zM3%205v2h19V5H3z%22%2F%3E%3C%2Fsvg%3E); }
 trix-toolbar .trix-dialogs {
-  position: relative; }
+  position: relative;
+}
 trix-toolbar .trix-dialog {
   position: absolute;
   top: 0;
@@ -128,7 +155,8 @@ trix-toolbar .trix-dialog {
   box-shadow: 0 0.3em 1em #ccc;
   border-top: 2px solid #888;
   border-radius: 5px;
-  z-index: 5; }
+  z-index: 5;
+}
 trix-toolbar .trix-input--dialog {
   font-size: inherit;
   font-weight: normal;
@@ -140,52 +168,69 @@ trix-toolbar .trix-input--dialog {
   box-shadow: none;
   outline: none;
   -webkit-appearance: none;
-  -moz-appearance: none; }
-  trix-toolbar .trix-input--dialog.validate:invalid {
-    box-shadow: #F00 0px 0px 1.5px 1px; }
+  -moz-appearance: none;
+}
+trix-toolbar .trix-input--dialog.validate:invalid {
+  box-shadow: #F00 0px 0px 1.5px 1px;
+}
 trix-toolbar .trix-button--dialog {
   font-size: inherit;
   padding: 0.5em;
-  border-bottom: none; }
+  border-bottom: none;
+}
 trix-toolbar .trix-dialog--link {
-  max-width: 600px; }
+  max-width: 600px;
+}
 trix-toolbar .trix-dialog__link-fields {
   display: flex;
-  align-items: baseline; }
+  align-items: baseline;
+}
   trix-toolbar .trix-dialog__link-fields .trix-input {
-    flex: 1; }
+    flex: 1;
+  }
   trix-toolbar .trix-dialog__link-fields .trix-button-group {
     flex: 0 0 content;
-    margin: 0; }
+    margin: 0;
+  }
 trix-editor [data-trix-mutable]:not(.attachment__caption-editor) {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 trix-editor [data-trix-mutable]::-moz-selection,
 trix-editor [data-trix-cursor-target]::-moz-selection, trix-editor [data-trix-mutable] ::-moz-selection {
-  background: none; }
+  background: none;
+}
 trix-editor [data-trix-mutable]::selection,
 trix-editor [data-trix-cursor-target]::selection, trix-editor [data-trix-mutable] ::selection {
-  background: none; }
+  background: none;
+}
 
 trix-editor [data-trix-mutable].attachment__caption-editor:focus::-moz-selection {
-  background: highlight; }
+  background: highlight;
+}
 trix-editor [data-trix-mutable].attachment__caption-editor:focus::selection {
-  background: highlight; }
+  background: highlight;
+}
 
 trix-editor [data-trix-mutable].attachment.attachment--file {
   box-shadow: 0 0 0 2px highlight;
-  border-color: transparent; }
+  border-color: transparent;
+}
 trix-editor [data-trix-mutable].attachment img {
-  box-shadow: 0 0 0 2px highlight; }
+  box-shadow: 0 0 0 2px highlight;
+}
 trix-editor .attachment {
-  position: relative; }
+  position: relative;
+}
   trix-editor .attachment:hover {
-    cursor: default; }
+    cursor: default;
+  }
 trix-editor .attachment--preview .attachment__caption:hover {
-  cursor: text; }
+  cursor: text;
+}
 trix-editor .attachment__progress {
   position: absolute;
   z-index: 1;
@@ -194,9 +239,11 @@ trix-editor .attachment__progress {
   left: 5%;
   width: 90%;
   opacity: 0.9;
-  transition: opacity 200ms ease-in; }
+  transition: opacity 200ms ease-in;
+}
   trix-editor .attachment__progress[value="100"] {
-    opacity: 0; }
+    opacity: 0;
+  }
 trix-editor .attachment__caption-editor {
   display: inline-block;
   width: 100%;
@@ -211,16 +258,19 @@ trix-editor .attachment__caption-editor {
   border: none;
   outline: none;
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+}
 trix-editor .attachment__toolbar {
   position: absolute;
   z-index: 1;
   top: -0.9em;
   left: 0;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 trix-editor .trix-button-group {
-  display: inline-flex; }
+  display: inline-flex;
+}
 trix-editor .trix-button {
   position: relative;
   float: left;
@@ -394,3 +444,9 @@ trix-editor .attachment__metadata {
       }
     }
   }
+
+.trix-editor {
+  &.form-control {
+    height: auto;
+  }
+}
