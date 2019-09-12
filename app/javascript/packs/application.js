@@ -17,5 +17,4 @@ const imagePath = (name) => images(name, true)
 
 require("trix")
 require("@rails/actiontext")
-import "../styles/application.pcss";
-import "../styles/trix.pcss";
+import "../styles/index.css";
