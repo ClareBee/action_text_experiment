@@ -4,8 +4,12 @@
     <%= form.label :title %><br> <%= form.text_field :title %>
   </p>
   <p>
-    <%= form.label :text %><br> <%= form.rich_text_area :text %>
+    <%= form.label :text %><br>
+    <%= form.rich_text_area :text,
+      data: { controllers: 'shoutouts', target: 'shoutouts.field' } %>
   </p>
-  <p>    <%= form.submit %>  </p>
+  <p>
+    <%= form.submit %>
+  </p>
 
 <% end %>
