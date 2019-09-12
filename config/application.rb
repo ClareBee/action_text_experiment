@@ -29,7 +29,9 @@ module ActionTextApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators do |g|
+      # Don't generate assets for Sprockets
+      g.assets = nil
+    end
   end
 end
