@@ -1,4 +1,19 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-<%= image_tag gravatar_image_url('spam@spam.com', size: 40) %>
-<button type="button" class="btn btn-primary">Primary</button>
+<h1>Articles</h1>
+<ul class="list-unstyled">
+  <% if @articles.blank? %>
+    <li>No articles added yet</li>
+  <% else %>
+    <% @articles.each do |article| %>
+      <hr />
+      <li class="media my-3">
+        <%= image_tag gravatar_image_url('spam@spam.com', size: 40), class: 'rounded mr-2' %>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1"><%= article.title %></h5>
+          <p><%= article.text %>
+        </div>
+        <%= link_to 'Show', article_path(article), class: 'btn btn-outline-primary mr-2' %>
+        <%= link_to 'Delete', article_path(article), method: :delete, class: 'btn btn-outline-danger' %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

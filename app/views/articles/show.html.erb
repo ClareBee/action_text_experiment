@@ -1,6 +1,13 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
-
-<p>Article Title:<strong><%= @article.title %></strong></p>
-<p>Article Text:<strong><%= @article.text %></strong></p>
-<%= link_to 'Create new', new_article_path %>
+<h1><%= @article.title.titleize %></h1>
+<hr />
+<h4>Article Title:</h4>
+<h4><strong><%= @article.title %></strong></h4>
+<br />
+<h4>Article Text:</h4>
+<div>
+  <p><%= @article.text %></p>
+</div>
+<hr />
+<%= link_to 'Back to Index', articles_path, class: 'btn btn-outline-secondary' %>
+<%= link_to 'Add a new article', new_article_path, class: 'btn btn-outline-primary' %>
+<%= link_to 'Delete', article_path(@article), method: :delete, class: 'btn btn-outline-danger' %>

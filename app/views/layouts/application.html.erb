@@ -5,14 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'styles', media: 'all' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body class="d-flex flex-column vh-100">
+    <header>
+      <%= render 'layouts/nav' %>
+    </header>
+    <main role="main" class="flex-shrink-0 mt-4">
+      <div class="container mt-4 p-4">
+        <%= render 'layouts/notifications' %>
+
+        <%= yield %>
+      </div>
+    </main>
     <%= javascript_pack_tag 'application' %>
 
+    <%= render 'layouts/footer' %>
   </body>
 </html>

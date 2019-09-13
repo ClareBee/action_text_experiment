@@ -1,15 +1,17 @@
-<h1>Articles</h1>
+<h1>New Article</h1>
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
-  <p>
-    <%= form.label :title %><br> <%= form.text_field :title %>
-  </p>
-  <p>
-    <%= form.label :text %><br>
-    <%= form.rich_text_area :text,
-      data: { controllers: 'shoutouts', target: 'shoutouts.field' } %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <%= render partial: 'layouts/form_errors', locals: { object: @article, field: :title } %>
 
+  <div class="form-group">
+    <%= form.label :title, class: 'font-weight-bold' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+  <%= render partial: 'layouts/form_errors', locals: { object: @article, field: :text } %>
+
+  <div class="form-group">
+    <%= form.label :text, class: 'font-weight-bold' %>
+    <%= form.rich_text_area :text, class: 'form-control',
+      data: { controllers: 'shoutouts', target: 'shoutouts.field' } %>
+  </div>
+  <%= form.submit 'Save', class: 'btn btn-primary' %>
 <% end %>
