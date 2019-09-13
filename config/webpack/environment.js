@@ -1,12 +1,14 @@
 
 const { environment } = require("@rails/webpacker");
+const webpack = require("webpack");
 
-["css", "moduleCss"].forEach(loaderName => {
-  const loader = environment.loaders.get(loaderName);
+// https://webpack.js.org/plugins/provide-plugin/
 
-  loader.test = /\.(p?css)$/i;
+environment.plugins.append("Provide", new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  Popper: ['popper.js', 'default']
+}))
 
-  environment.loaders.insert(loaderName, loader);
-});
 
 module.exports = environment
