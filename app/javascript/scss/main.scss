@@ -1,0 +1,9 @@
+@import "normalize.css/normalize.css";
+@import "./trix.scss";
+@import "~bootstrap/scss/bootstrap";
+
+trix-editor {
+  &.form-control {
+    height: auto;
+  }
+}
