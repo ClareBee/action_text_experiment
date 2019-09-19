@@ -9,9 +9,9 @@ Expanded with Stimulus slideshow as a way of experimenting w the framework
 
 Trix - out-of-the-box text editing
 ![trix](images/actiontexteditor.jpg)
-![show](show_page.jpg)
-![stimulus_slideshow](https://raw.githubusercontent.com/ClareBee/action_text/images/stimulus_slideshow.jpg)
-![gallery](https://raw.githubusercontent.com/ClareBee/action_text/images/gallery.jpg)
+![show](images/show_page.jpg)
+![stimulus_slideshow](images/stimulus_slideshow.jpg)
+![gallery](images/gallery.jpg)
 
 ## Learning Notes
 
