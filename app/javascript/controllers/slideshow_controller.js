@@ -8,11 +8,15 @@ export default class extends Controller {
   }
 
   next() {
-    this.showSlide(this.index + 1)
+    if(this.index < this.slideTargets.length - 1){
+      this.showSlide(this.index + 1)
+    }
   }
 
   previous() {
-    this.showSlide(this.index - 1)
+    if(this.index > 0){
+      this.showSlide(this.index - 1)
+    }
   }
 
   showSlide(index) {
