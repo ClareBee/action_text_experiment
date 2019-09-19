@@ -1,19 +1,27 @@
 <h1>Articles</h1>
-<ul class="list-unstyled">
   <% if @articles.blank? %>
+  <ul class="list-unstyled">
     <li>No articles added yet</li>
+  </ul>
   <% else %>
+
+  <div data-controller="slideshow">
+    <button data-action="slideshow#previous">←</button>
+    <button data-action="slideshow#next">→</button>
     <% @articles.each do |article| %>
-      <hr />
-      <li class="media my-3">
-        <%= image_tag gravatar_image_url('spam@spam.com', size: 40), class: 'rounded mr-2' %>
-        <div class="media-body">
-          <h5 class="mt-0 mb-1"><%= article.title %></h5>
-          <p><%= article.text %>
+
+      <div data-target="slideshow.slide" class="slide">
+        <hr />
+        <div class="media my-3">
+          <%= image_tag gravatar_image_url('spam@spam.com', size: 40), class: 'rounded mr-2' %>
+          <div class="media-body">
+            <h5 class="mt-0 mb-1"><%= article.title %></h5>
+            <p><%= article.text %>
+          </div>
+          <%= link_to 'Show', article_path(article), class: 'btn btn-outline-primary mr-2' %>
+          <%= link_to 'Delete', article_path(article), method: :delete, class: 'btn btn-outline-danger' %>
         </div>
-        <%= link_to 'Show', article_path(article), class: 'btn btn-outline-primary mr-2' %>
-        <%= link_to 'Delete', article_path(article), method: :delete, class: 'btn btn-outline-danger' %>
-      </li>
+      </div>
     <% end %>
+  </div>
   <% end %>
-</ul>
