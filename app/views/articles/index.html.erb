@@ -10,8 +10,14 @@
 
     <div data-controller="slideshow">
       <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-secondary btn-lg" data-action="slideshow#previous">←</button>
-        <button class="btn btn-outline-primary btn-lg" data-action="slideshow#next">→</button>
+        <div>
+          <button class="btn btn-outline-secondary btn-lg" data-action="slideshow#previous">←</button>
+          <span class="text-muted">Prev</span>
+        </div>
+        <div>
+          <span class="text-muted">Next</span>
+          <button class="btn btn-outline-primary btn-lg" data-action="slideshow#next">→</button>
+        </div>
       </div>
 
       <% @articles.each do |article| %>
