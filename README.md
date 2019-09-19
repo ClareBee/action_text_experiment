@@ -8,10 +8,10 @@ https://gorails.com/episodes/how-to-use-action-text?autoplay=1
 Expanded with Stimulus slideshow as a way of experimenting w the framework
 
 Trix - out-of-the-box text editing
-[!trix]('/images/actiontexteditor.jpg')
-[!show]('./images/show_page.jpg')
-[!stimulus_slideshow]('stimulus_slideshow.jpg')
-[!gallery]('images/gallery.jpg')
+![trix]('/images/actiontexteditor.jpg')
+![show]('./images/show_page.jpg')
+![stimulus_slideshow]('stimulus_slideshow.jpg')
+![gallery]('images/gallery.jpg')
 
 ## Learning Notes
 
