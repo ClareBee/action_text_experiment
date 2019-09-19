@@ -1,4 +1,7 @@
 <h1>New Article</h1>
+<div data-controller="hello">
+  <h1 data-target="hello.output"></h1>
+</div>
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
   <%= render partial: 'layouts/form_errors', locals: { object: @article, field: :title } %>
 
@@ -11,7 +14,7 @@
   <div class="form-group">
     <%= form.label :text, class: 'font-weight-bold' %>
     <%= form.rich_text_area :text, class: 'form-control',
-      data: { controllers: 'shoutouts', target: 'shoutouts.field' } %>
+      data: { controller: 'mentions', target: 'mentions.field' } %>
   </div>
   <%= form.submit 'Save', class: 'btn btn-primary' %>
 <% end %>
