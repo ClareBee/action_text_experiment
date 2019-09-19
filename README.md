@@ -8,10 +8,10 @@ https://gorails.com/episodes/how-to-use-action-text?autoplay=1
 Expanded with Stimulus slideshow as a way of experimenting w the framework
 
 Trix - out-of-the-box text editing
-![trix](https://github.com/ClareBee/action_text/images/actiontexteditor.jpg)
-![show](https://github.com/ClareBee/action_text/images/show_page.jpg)
-![stimulus_slideshow](https://github.com/ClareBee/action_text/images/stimulus_slideshow.jpg)
-![gallery](https://github.com/ClareBee/action_text/images/gallery.jpg)
+![trix](images/actiontexteditor.jpg)
+![show](show_page.jpg)
+![stimulus_slideshow](https://raw.githubusercontent.com/ClareBee/action_text/images/stimulus_slideshow.jpg)
+![gallery](https://raw.githubusercontent.com/ClareBee/action_text/images/gallery.jpg)
 
 ## Learning Notes
 
