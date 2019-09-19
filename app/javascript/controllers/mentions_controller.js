@@ -25,7 +25,7 @@ export default class extends Controller {
     this.tribute.range.pasteHtml = this._pasteHtml.bind(this)
     this.fieldTarget.addEventListener("tribute-replaced", this.replaced)
   }
-
+  // from mentions controller
   fetchUsers(text, callback) {
     fetch(`/mentions.json?query=${text}`)
       .then(response => response.json())
